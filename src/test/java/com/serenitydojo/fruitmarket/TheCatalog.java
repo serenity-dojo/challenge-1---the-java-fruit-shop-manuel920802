@@ -9,8 +9,7 @@ import java.util.Map;
 
 public class TheCatalog {
 
-    HashMap<String, Double> fruitCatalog = new HashMap<>();
-
+    Map<String, Double> fruitCatalog = Map.of("Apple", 1.00,"Orange",1.00,"Banana",1.00,"Pear",1.00);
 
     @Test
     public void shouldBeAbleToUpdateTheCurrentPriceOfAFruit() {
