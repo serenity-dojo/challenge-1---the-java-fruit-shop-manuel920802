@@ -3,18 +3,20 @@ package com.serenitydojo;
 import java.util.Map;
 
 public class Catalog {
-    Map<String, Integer> fruitCatalog;
+    Map<String, Double> fruitCatalog;
 
-    public Catalog(Map<String,Integer> fruitCatalog){
+    public Catalog(Map<String,Double> fruitCatalog){
         this.fruitCatalog = fruitCatalog;
     }
 
-    public String setPriceOf(String Apple){
-        return fruitCatalog.toString();
+    public void setPriceOf(String fruit, Double price){
+        if (fruitCatalog.containsKey(fruit)){
+            fruitCatalog.put(fruit,price);
+        }
     }
 
-    public double getPriceOf(){
-        return 0;
+    public Double getPriceOf(String fruit) {
+        return fruitCatalog.get(fruit);
     }
 
 

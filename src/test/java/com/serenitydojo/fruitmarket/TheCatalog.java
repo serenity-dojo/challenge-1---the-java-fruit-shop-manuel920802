@@ -10,14 +10,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TheCatalog {
 
-    Map<String, Integer> fruitCatalog = Map.of("Apple", 1,"Orange",2,"Banana",3,"Pear",4);
+    Map<String, Double> fruitCatalog = Map.of("Apple", 1.00,"Orange",1.00,"Banana",1.00,"Pear",1.00);
 
     @Test
     public void shouldBeAbleToUpdateTheCurrentPriceOfAFruit() {
-// TODO: Uncomment this code and make it work
+
         Catalog catalog = new Catalog(fruitCatalog);
-       catalog.setPriceOf(Apple).to(4.00);
-       assertThat(catalog.getPriceOf(Apple)).isEqualTo(4.00);
+       catalog.setPriceOf("Apple", 4.00);
+       assertThat(catalog.getPriceOf("Apple")).isEqualTo(4.00);
 
     }
 }
