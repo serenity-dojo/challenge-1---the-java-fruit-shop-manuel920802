@@ -39,7 +39,7 @@ public class TheCatalog {
         //WHEN
         catalog.getFruitList(sortedFruits);
         //THEN
-        Assertions.assertThat(sortedFruits).containsOnlyKeys("Apple","Banana","Orange","Pear");
+        assertThat(sortedFruits).containsOnlyKeys("Apple","Banana","Orange","Pear");
 
 
 
