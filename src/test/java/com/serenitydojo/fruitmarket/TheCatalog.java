@@ -6,6 +6,9 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class TheCatalog {
 
@@ -25,7 +28,22 @@ public class TheCatalog {
         //WHEN
        catalog.setPriceOf("Apple", 4.00);
        //THEN
-       Assertions.assertThat(catalog.getPriceOf("Apple")).isEqualTo(4.00);
+       assertThat(catalog.getPriceOf("Apple")).isEqualTo(4.00);
+    }
+
+    @Test
+    public void shouldListNamesOfAvailableFruitInAlphabeticalOrder(){
+        //GIVEN
+        Catalog catalog = new Catalog(fruitCatalog);
+        Map<String,Double> sortedFruits = new TreeMap<>(fruitCatalog);
+        //WHEN
+        catalog.getFruitList(sortedFruits);
+        //THEN
+        Assertions.assertThat(sortedFruits).containsOnlyKeys("Apple","Banana","Orange","Pear");
+
+
+
+
     }
 
 }

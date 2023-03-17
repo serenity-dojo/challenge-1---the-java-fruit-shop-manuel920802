@@ -19,6 +19,12 @@ public class Catalog {
         return fruitCatalog.get(fruit);
     }
 
+    public <K,V> void getFruitList(Map<K,V> map){
+        for (Map.Entry<K,V> entry: map.entrySet()){
+            System.out.println("Fruit :" + entry.getKey());
+        }
+    }
+
 
 
 }
