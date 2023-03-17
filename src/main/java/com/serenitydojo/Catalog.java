@@ -11,7 +11,7 @@ public class Catalog {
 
     public void setPriceOf(String fruit, Double price){
         if (fruitCatalog.containsKey(fruit)){
-            fruitCatalog.put(fruit,price);
+            fruitCatalog.replace(fruit,price);
         }
     }
 
