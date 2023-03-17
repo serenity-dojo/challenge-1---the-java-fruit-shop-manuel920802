@@ -9,13 +9,22 @@ import java.util.Map;
 
 public class TheCatalog {
 
-    Map<String, Double> fruitCatalog = Map.of("Apple", 1.00,"Orange",1.00,"Banana",1.00,"Pear",1.00);
+    Map<String, Double> fruitCatalog;
+    {
+        fruitCatalog = new HashMap<>();
+        fruitCatalog.put("Apple",1.00);
+        fruitCatalog.put("Orange",1.00);
+        fruitCatalog.put("Banana",1.00);
+        fruitCatalog.put("Pear",1.00);
+    }
 
     @Test
     public void shouldBeAbleToUpdateTheCurrentPriceOfAFruit() {
-
+        //GIVEN
         Catalog catalog = new Catalog(fruitCatalog);
+        //WHEN
        catalog.setPriceOf("Apple", 4.00);
+       //THEN
        Assertions.assertThat(catalog.getPriceOf("Apple")).isEqualTo(4.00);
     }
 
