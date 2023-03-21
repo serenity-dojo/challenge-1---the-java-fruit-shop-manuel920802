@@ -26,6 +26,9 @@ public class Catalog {
         fruitCatalog.remove(fruit,price);
     }
 
+   public void updatePriceOf(String fruit, Double oldPrice, Double newPrice){
+       fruitCatalog.replace(fruit,oldPrice,newPrice);
+    }
 
 
 
