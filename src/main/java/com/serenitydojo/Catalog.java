@@ -1,29 +1,27 @@
 package com.serenitydojo;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Catalog {
-    Map<String, Double> fruitCatalog;
-
-    public Catalog(Map<String,Double> fruitCatalog){
-        this.fruitCatalog = fruitCatalog;
-    }
+    private Map<String, Double> fruitCatalog = new HashMap<>();
 
     public void setPriceOf(String fruit, Double price){
-        if (fruitCatalog.containsKey(fruit)){
-            fruitCatalog.replace(fruit,price);
-        }
+        fruitCatalog.put(fruit,price);
     }
 
     public Double getPriceOf(String fruit) {
+        if(!fruitCatalog.containsKey(fruit)){
+            throw new FruitUnavailableException("No fruit available for: " + fruit);
+        }
         return fruitCatalog.get(fruit);
     }
 
-    public <K,V> void getFruitList(Map<K,V> map){
-        for (Map.Entry<K,V> entry: map.entrySet()){
-            System.out.println("Fruit :" + entry.getKey());
-        }
+    public List<String> getFruitList(){
+        return fruitCatalog.keySet().stream().sorted().toList();
     }
+
 
 
 
