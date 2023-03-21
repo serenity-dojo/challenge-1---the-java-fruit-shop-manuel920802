@@ -47,10 +47,26 @@ public class TheCatalog {
         catalog.setPriceOf("Oranges",3.50);
         catalog.setPriceOf("Bananas",2.50);
         catalog.setPriceOf("Pears",2.00);
-        //THEN
+
         catalog.getPriceOf("Kiwis");
+        //THEN
+        assertThat(catalog.getPriceOf("Kiwis")).isNull();
+    }
 
+    @Test public void shouldBeAbleToDeleteTheCurrentPriceOfAFruit(){
+        // You can delete a fruit name and price from the fruit catalog
 
+        //GIVEN
+        Catalog catalog = new Catalog();
+        //WHEN
+        catalog.setPriceOf("Apples",4.00);
+        catalog.setPriceOf("Oranges",3.50);
+        catalog.setPriceOf("Bananas",2.50);
+        catalog.setPriceOf("Pears",2.00);
+
+        catalog.deletePriceOf("Pears",2.00);
+        //THEN
+        assertThat(catalog.getFruitList()).doesNotContain("Pears");
     }
 
 

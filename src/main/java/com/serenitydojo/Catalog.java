@@ -22,6 +22,10 @@ public class Catalog {
         return fruitCatalog.keySet().stream().sorted().toList();
     }
 
+    public void deletePriceOf(String fruit, Double price){
+        fruitCatalog.remove(fruit,price);
+    }
+
 
 
 
