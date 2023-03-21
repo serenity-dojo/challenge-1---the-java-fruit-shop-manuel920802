@@ -30,6 +30,14 @@ public class Catalog {
        fruitCatalog.replace(fruit,oldPrice,newPrice);
     }
 
+    public void searchForFruits(String fruit){
+        if(fruitCatalog.containsKey(fruit)){
+            System.out.println("The fruit Catalog contains: " + fruit);
+        } else {
+            System.out.println("The fruit Catalog does not contains: " + fruit);
+        }
+    }
+
 
 
 
