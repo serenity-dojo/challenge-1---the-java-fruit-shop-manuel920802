@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Catalog {
     private Map<String, Double> fruitCatalog = new HashMap<>();
-    private double kilograms;
 
     public void setPriceOf(String fruit, Double price){
         fruitCatalog.put(fruit,price);
@@ -38,7 +37,11 @@ public class Catalog {
             System.out.println("The fruit Catalog does not contains: " + fruit);
         }
     }
-
+    public void printFruitMap(){
+        for (Map.Entry<String, Double> entry: fruitCatalog.entrySet() ){
+            System.out.println("Fruit:" + entry.getKey() + " -> " + "Cost per unit:" + entry.getValue());
+        }
+    }
 
 
 

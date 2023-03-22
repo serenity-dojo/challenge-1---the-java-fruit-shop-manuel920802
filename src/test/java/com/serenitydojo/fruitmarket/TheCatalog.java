@@ -1,8 +1,11 @@
 package com.serenitydojo.fruitmarket;
 
+import com.serenitydojo.CartItem;
 import com.serenitydojo.Catalog;
 import com.serenitydojo.FruitUnavailableException;
 import org.junit.Test;
+
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -103,11 +106,26 @@ public class TheCatalog {
     }
 
     @Test
-    public void shouldBeAbleToAddFruitsToShoppingCart(){
-        //You can add items to your shopping cart, which should keep a running total.
+    public void shouldBeAbleToPrintFruitMap(){
+        //When user wants to know all items  and prices included in fruit catalog
 
         //GIVEN
         Catalog catalog = new Catalog();
+        //WHEN
+        catalog.setPriceOf("Apples",4.00);
+        catalog.setPriceOf("Oranges",3.50);
+        catalog.setPriceOf("Bananas",2.50);
+        catalog.setPriceOf("Pears",2.00);
+
+        //THEN
+        catalog.printFruitMap();
+    }
+
+    @Test
+    public void shouldBeAbleToAddFruitsToShoppingCart(){
+        //You can add items to your shopping cart, which should keep a running total.
+        //GIVEN
+
         //WHEN
 
         //THEN
@@ -119,7 +137,7 @@ public class TheCatalog {
         //When you buy 5 kilos or more of any fruit, you get a 10% discount.
 
         //GIVEN
-        Catalog catalog = new Catalog();
+
         //WHEN
 
         //THEN

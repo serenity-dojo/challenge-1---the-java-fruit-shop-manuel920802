@@ -1,28 +1,21 @@
 package com.serenitydojo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class ShoppingCart {
-    private String product;
-    private int quantity;
+    private List<CartItem> cartItemList = new ArrayList<>();
+    private Double discount;
+    private Map<String, Catalog> fruitCart;
 
 
-    public ShoppingCart(String product, int quantity, double kilograms) {
-        this.product = product;
-        this.quantity = quantity;
-    }
-    public String getProduct() {
-        return product;
+    public ShoppingCart(Map<String, Catalog> fruitCart, Double discount ) {
+        this.fruitCart = fruitCart;
+        this.discount = discount;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
-    }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
 }
