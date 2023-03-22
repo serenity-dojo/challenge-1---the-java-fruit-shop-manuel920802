@@ -1,11 +1,8 @@
 package com.serenitydojo.fruitmarket;
 
-import com.serenitydojo.CartItem;
 import com.serenitydojo.Catalog;
 import com.serenitydojo.FruitUnavailableException;
 import org.junit.Test;
-
-import java.util.Map;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -119,29 +116,6 @@ public class TheCatalog {
 
         //THEN
         catalog.printFruitMap();
-    }
-
-    @Test
-    public void shouldBeAbleToAddFruitsToShoppingCart(){
-        //You can add items to your shopping cart, which should keep a running total.
-        //GIVEN
-
-        //WHEN
-
-        //THEN
-        //assertThat()
-    }
-
-    @Test
-    public void shouldBeAbleToBuy5KilosOrMoreToGetDiscount(){
-        //When you buy 5 kilos or more of any fruit, you get a 10% discount.
-
-        //GIVEN
-
-        //WHEN
-
-        //THEN
-        //assertThat()
     }
 
 
