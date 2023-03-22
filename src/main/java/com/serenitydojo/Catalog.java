@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Catalog {
-    private Map<String, Double> fruitCatalog = new HashMap<>();
+    private final Map<String, Double> fruitCatalog = new HashMap<>();
 
     public void setPriceOf(String fruit, Double price){
         fruitCatalog.put(fruit,price);
