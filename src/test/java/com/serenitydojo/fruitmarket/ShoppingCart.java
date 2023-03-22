@@ -1,5 +1,7 @@
-package com.serenitydojo;
+package com.serenitydojo.fruitmarket;
 
+import com.serenitydojo.Cart;
+import com.serenitydojo.Catalog;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
