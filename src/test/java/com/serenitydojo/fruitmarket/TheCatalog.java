@@ -109,10 +109,6 @@ public class TheCatalog {
         //GIVEN
         Catalog catalog = new Catalog();
         //WHEN
-        catalog.setPriceOf("Apples",4.00);
-        catalog.setPriceOf("Oranges",3.50);
-        catalog.setPriceOf("Bananas",2.50);
-        catalog.setPriceOf("Pears",2.00);
 
         //THEN
         //assertThat()
@@ -125,10 +121,6 @@ public class TheCatalog {
         //GIVEN
         Catalog catalog = new Catalog();
         //WHEN
-        catalog.setPriceOf("Apples",4.00);
-        catalog.setPriceOf("Oranges",3.50);
-        catalog.setPriceOf("Bananas",2.50);
-        catalog.setPriceOf("Pears",2.00);
 
         //THEN
         //assertThat()
